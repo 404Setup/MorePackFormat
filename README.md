@@ -1,2 +1,2 @@
 # MorePackFormat
-Allows loading packs using more compression formats.
+Allows loading packs using zstd compression formats.

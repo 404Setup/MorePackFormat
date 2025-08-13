@@ -11,6 +11,6 @@ public class PackDetectorMixin {
     @Redirect(method = "detectPackResources", at = @At(value = "INVOKE", target = "Ljava/lang/String;endsWith(Ljava/lang/String;)Z"))
     private boolean mpf$endsWith(String string, String suffix) {
         int supported = ZipTarget.isSupported(string);
-        return supported > 0 && supported < 4;
+        return supported > 0 && supported < 4 && supported != 2;
     }
 }

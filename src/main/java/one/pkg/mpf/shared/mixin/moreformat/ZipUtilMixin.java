@@ -12,8 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class ZipUtilMixin {
     @Inject(method = "supportsMethodOf", at = @At(value = "HEAD"), cancellable = true)
     private static void mpf$supportsMethodOf(ZipArchiveEntry entry, CallbackInfoReturnable<Boolean> cir) {
-        if (entry.getMethod() == ZipTarget.ZSTD_METHOD ||
-                entry.getMethod() == ZipTarget.BROTLI_METHOD)
+        if (entry.getMethod() == ZipTarget.ZSTD_METHOD)
             cir.setReturnValue(true);
     }
 }

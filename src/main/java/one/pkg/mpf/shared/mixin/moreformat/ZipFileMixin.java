@@ -1,6 +1,5 @@
 package one.pkg.mpf.shared.mixin.moreformat;
 
-import com.aayushatharva.brotli4j.decoder.BrotliInputStream;
 import com.github.luben.zstd.ZstdInputStream;
 import com.llamalad7.mixinextras.sugar.Local;
 import one.pkg.pchf.shared.util.ZipTarget;
@@ -20,8 +19,6 @@ public class ZipFileMixin {
     private void mpf$getInputStreamWithZstd(ZipArchiveEntry entry, CallbackInfoReturnable<InputStream> cir, @Local InputStream is) throws IOException {
         if (entry.getMethod() == ZipTarget.ZSTD_METHOD) {
             cir.setReturnValue(new ZstdInputStream(is));
-        } else if (entry.getMethod() == ZipTarget.BROTLI_METHOD) {
-            cir.setReturnValue(new BrotliInputStream(is));
         }
     }
 }

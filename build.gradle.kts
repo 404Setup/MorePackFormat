@@ -32,18 +32,6 @@ dependencies {
 
     include(implementation("com.github.luben:zstd-jni:${zstdVersion}")!!)
 
-    include(implementation("com.aayushatharva.brotli4j:brotli4j:${brotliVersion}")!!)
-    include(implementation("com.aayushatharva.brotli4j:service:${brotliVersion}")!!)
-    include(implementation("com.aayushatharva.brotli4j:native-linux-aarch64:${brotliVersion}")!!)
-    include(implementation("com.aayushatharva.brotli4j:native-linux-x86_64:${brotliVersion}")!!)
-    include(implementation("com.aayushatharva.brotli4j:native-linux-riscv64:${brotliVersion}")!!)
-    include(implementation("com.aayushatharva.brotli4j:native-osx-x86_64:${brotliVersion}")!!)
-    include(implementation("com.aayushatharva.brotli4j:native-osx-aarch64:${brotliVersion}")!!)
-    include(implementation("com.aayushatharva.brotli4j:native-windows-aarch64:${brotliVersion}")!!)
-    include(implementation("com.aayushatharva.brotli4j:native-windows-x86_64:${brotliVersion}")!!)
-    include(implementation("com.aayushatharva.brotli4j:native-linux-aarch64:${brotliVersion}")!!)
-    include(implementation("com.aayushatharva.brotli4j:native-linux-aarch64:${brotliVersion}")!!)
-
     modImplementation(files("pchf-common-1.21.8-0.0.3+1.21.8.jar"))
 
     modImplementation("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_version")}")
