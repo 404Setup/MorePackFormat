@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "package": "one.pkg.mpf.shared.mixin",
+  "refmap": "more_pack_format.refmap.json",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "moreformat.PackDetectorMixin",
+    "moreformat.ZipFileMixin",
+    "moreformat.ZipMethodMixin",
+    "moreformat.ZipUtilMixin",
+    "pchf.MoreFormatAPIMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}
